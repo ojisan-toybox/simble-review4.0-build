@@ -6,8 +6,6 @@ $ docker pull vvakame/review:4.0
 
 $ docker run --rm -v $(pwd)/src:/work vvakame/review:4.0 /bin/sh -c "cd /work && review-pdfmaker config.yml"
 
-# test
-$ docker run -t --rm -v $(pwd):/book vvakame/review:4. /bin/bash -ci "cd /book && ./setup.sh && REVIEW_CONFIG_FILE=$REVIEW_CONFIG_FILE npm run pdf"
 
 ```
 
@@ -55,4 +53,6 @@ l.68 ^^M
 No pages of output.
 Transcript written on **REVIEW_BOOK**.log.
 
----
+=> これで解決できそう
+
+## https://review-knowledge-ja.readthedocs.io/ja/latest/releases/review400.html#0ff035905a79b556751b53bb55b583e5
