@@ -4,20 +4,17 @@
 # get docker image
 $ docker pull vvakame/review:4.0
 
-# 間違い
+# init-間違い
 $ docker run --rm -v $(pwd)/src:/work vvakame/review:4.0 /bin/sh -c "review-init hoge"
 
-# 正解
+# init-正解
 $ docker run \
  --rm \
  -v $(pwd):/work \
  vvakame/review:4.0 /bin/sh -c "cd /work && review-init hoge"
 
-$  docker run \
- --rm \
- -v $(pwd):/work \
- -v $(pwd)/.texmf-var:/root/.texmf-var \
- vvakame/review:4.0 /bin/sh -c "cd /work && review-pdfmaker ./config.yml"
+# build
+$  docker run --rm -v $(pwd):/work vvakame/review:4.0 /bin/sh -c "cd /work && review-pdfmaker config.yml"
 ```
 
 ## error log
